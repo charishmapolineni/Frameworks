@@ -1,0 +1,121 @@
+package KeywordDrivenTesting;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
+
+
+
+
+
+public class Methods {
+	 static WebDriver  driver;
+	  //static Logger log = Logger.getLogger(Methods.class);
+	 public static void openBrowser() {
+		 System.setProperty("webdriver.chrome.driver","C:\\develop\\Frameworks\\driver\\chromedriver.exe");
+			driver=new ChromeDriver();
+			 //log.info("This message is to open Url ");
+			 //log.warn("This is a warning message");
+			 //log.fatal("This is a fatal error message");
+			 //log.debug("This is debug error");
+			
+		
+			
+	 }
+	 public static void navigate(String baseUrl) {
+		 driver.get(baseUrl);
+		
+	 }
+	 public static void maximizeWindow() {
+		 driver.manage().window().maximize(); 
+	 }
+
+	 //Wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(("si_popup_email")));
+	 public static void enterInvalidUsername(String locators,String value,String param) {
+		 if(locators.equals("id"));
+		 driver.findElement(By.id(value)).sendKeys(param);
+
+	
+	 }
+		 public static void enterInvalidPassword(String locators,String value,String param1) {
+			 if(locators.equals("cssSelector"));
+		driver.findElement(By.cssSelector(value)).sendKeys(param1);
+		
+			
+			 
+		 }
+		 public static void implimentWait() {
+			 driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		 }
+		 
+		 public static void clickSubmit(String locators,String value) {
+			 if(locators.equals("xpath"));
+			 driver.findElement(By.xpath(value)).click();
+	 }
+		 public static void verifyMessage(String value,String message) {
+			 String expectedMessage = message;
+			 String actualMessage  = driver.findElement(By.id(value)).getText();
+					 Assert.assertEquals( actualMessage, expectedMessage);
+		 }
+		 public static void explicitWait() {
+			 WebDriverWait waitElement = new WebDriverWait(driver,20);waitElement.until(ExpectedConditions.visibilityOfElementLocated(By.id("dropdownMenu3")));
+		 }
+		public static void opencoursesbrowser(String locators,String value) {
+			if(locators.equals("id"));
+			driver.findElement(By.id(value)).sendKeys("From Id");
+		}
+		public static void openmyclassroompage(String locators,String value) {
+			if(locators.equals("xpath"));
+			driver.findElement(By.xpath(value)).click();
+		}
+		public static void implimentWait1() {
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		 }
+			
+		public static void navigateback(String baseUrl) {
+			driver.get (baseUrl);
+		}
+		public static void myprofilepage(String locators,String value) {
+			if(locators.equals("xpath"));
+			driver.findElement(By.xpath(value)).click();
+			
+		}
+		public static void ClickLogout(String locators,String value) {
+			if(locators.equals("xpath"));
+			driver.findElement(By.xpath(value)).click();
+			
+		}
+		
+			
+		
+		 
+	 
+	  
+  @Test
+  public void f()
+  {
+	
+	
+}
+public static void maximizewindow1() {
+	// TODO Auto-generated method stub
+	
+}
+
+	// TODO Auto-generated method stub
+	
+}
+
+	// TODO Auto-generated method stub
+	
+
+

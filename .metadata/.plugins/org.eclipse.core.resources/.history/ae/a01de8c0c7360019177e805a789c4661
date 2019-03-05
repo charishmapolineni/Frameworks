@@ -1,0 +1,123 @@
+package KeywordDrivenTesting;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import utility.ReadExcelFile;
+
+public class application {
+  
+
+
+@Test
+  public void applicationTest() throws IOException, InterruptedException {
+	  System.setProperty("webdriver.chrome.driver","C:\\develop\\Frameworks\\driver\\chromedriver.exe");
+	  WebDriver driver = new ChromeDriver();
+	  String[][] data = ReadExcelFile.getData("TestExcel.xlsx", "Sheet2");
+	  String[][] data1 = ReadExcelFile.getData("TestExcel.xlsx","Sheet1");
+	  for(int j=1;j<data1.length;j++)
+	  for(int i=1;i<data.length;i++) 
+   	
+	  {
+    	  {
+	  }
+	
+		switch(data[i][2]) {	
+		  case "openBrowser":
+			  Methods.openBrowser();
+			  System.out.println("###################### start Open Browser ##########################");
+			  break;
+		  case"navigateapplication":
+			  Methods.navigate(data[i][6]);
+			  System.out.println("###################### start navigateapplication##########################");
+			  System.out.println(data[i][6]);
+			  System.out.println("###################### End navigateapplication ##########################");
+			  break;
+		  case "maximizeWindow":
+			  Methods.maximizeWindow();
+			  System.out.println("############################## maximize Window ###################");
+			  break;
+		  case"enterInvalidUsername":
+			  Thread.sleep(10000);
+			  System.out.println("########################## enterInvalidUsername ######################");
+			  System.out.println(data[i][4]);
+			  System.out.println(data[i][5]);
+			  System.out.println(data1[j][0]);
+			  System.out.println("###################### closeInvalidUsername #################");
+			  Methods.enterInvalidUsername(data[i][4],data[i][5],data1[j][0]);
+			  break;
+		  case"enterInvalidPassword":
+			  System.out.println("####################### enterInvalidPassword ###################");
+			  System.out.println(data[i][4]);
+			  System.out.println(data[i][5]);
+			  System.out.println(data1[j][1]);
+			  System.out.println("######################## closeInvalidPassword ##################");
+			  Methods.enterInvalidPassword(data[i][4],data[i][5],data1[j][1]);
+			  break;
+		  case"implimentWait":
+			  Methods.implimentWait();
+			  System.out.println("################## implimentWait ###################");
+			  break;
+		  case"clickSubmit":
+			  Methods.clickSubmit(data[i][4],data[i][5]);
+			  System.out.println("################## clickSubmit ####################");
+			  break;
+		  case "verifyMessage":
+			  Methods.verifyMessage(data[i][5],data[i][6]);
+			  System.out.println("############### explicitWait ######################");
+		  case "explicitWait":
+			  Methods.explicitWait();
+			  break;
+		  case "opencoursesbrowser":
+			  Thread.sleep(100000);
+			  Methods.opencoursesbrowser(data[i][4],data[i][5]);
+			  System.out.println("################# opencoursesbrowser ################");
+			  break;
+		  case "openmyclassroompage":
+			  Methods.openmyclassroompage(data[i][4],data[i][5]);
+			  System.out.println("################ openmyclassroompage ##################");
+			  break;
+		  case "implimentWait1":
+			  Methods.implimentWait();
+			  System.out.println("################ implimentWait ################");
+			  break;
+		  case "navigateback":
+			  Methods.navigateback(data[i][6]);
+			  System.out.println("################ navigateback ##################");
+			  break;
+		  case "myprofilepage":
+			  Methods.myprofilepage(data[i][4],data[i][5]);
+			  System.out.println("################# myprofilepage #################");
+			  break;
+		  case "clicklogout":
+			  Methods.clicklogout(data[i][4],data[i][5]);
+			  System.out.println("################## clicklogout #############https://www.edureka.co/signouthttps://www.edureka.co/signout######");
+			  break;
+		  }
+	  }
+	  }
+}
+
+
+
+
+
+
+  
+
+		 
+			  
+			 
+			  
+			  
+			
+		  		
+		  		
+		  
+  
+
+  
+

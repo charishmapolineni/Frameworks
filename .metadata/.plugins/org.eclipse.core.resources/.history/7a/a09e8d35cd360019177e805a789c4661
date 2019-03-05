@@ -1,0 +1,64 @@
+package project;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.log4testng.Logger;
+
+import KeywordDrivenTesting.Methods;
+
+public class actions {
+	public static WebDriver driver;
+	  static Logger log = Logger.getLogger(actions.class);
+	public static void openBrowser()
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\develop\\Frameworks\\src\\project\\actions\\driver\\chromedriver.exe");
+		driver=new ChromeDriver();
+		 log.info("This message is to open Url ");
+		 log.warn("This is a warning message");
+		 log.fatal("This is a fatal error message");
+		 log.debug("This is debug error");
+	
+	}
+	
+	public static void navigateapplication(String baseUrl) {
+		driver.get(baseUrl);
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void maximizewindow() {
+		driver.manage().window().maximize();
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void enterinvalidusername( String locators,String value,String param) {
+		if(locators.equals("id"));
+		driver.findElement(By.id(value)).sendKeys(param);
+
+		
+	}
+	
+	
+	
+			
+	
+		// TODO Auto-generated method stub
+		
+	}
+	
+		
+	}
+	
+			
+		}
+		
+	
+	
+
+
+

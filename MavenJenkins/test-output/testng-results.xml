@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="166361" started-at="2019-02-23T17:51:26Z" finished-at="2019-02-23T17:54:12Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="166361" started-at="2019-02-23T17:51:26Z" finished-at="2019-02-23T17:54:12Z">
+      <class name="com.jenkins.JenkinsExample">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.jenkins.JenkinsExample@4cc0edeb]" name="login" is-config="true" duration-ms="6012" started-at="2019-02-23T17:51:26Z" finished-at="2019-02-23T17:51:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="getportal()[pri:0, instance:com.jenkins.JenkinsExample@4cc0edeb]" name="getportal" duration-ms="160321" started-at="2019-02-23T17:51:32Z" finished-at="2019-02-23T17:54:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getportal -->
+      </class> <!-- com.jenkins.JenkinsExample -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="parameter">
+  <test thread-count="5" name="crossbrowserTesting-chrome">
+  <parameter name="email" value="charishmaraopolineni@gmail.com"/>
+  <parameter name="password" value="cherry123"/>
+  <parameter name="email" value="charishmaraopolineni@gmail.com"/>
+  <parameter name="phone-no" value="19356875483"/>
+    <classes>    
+      <class name="com.TestNGDemo.src.TestNGConcepts.parameterization"/> 
+      
+    </classes>
+  </test> <!-- -->
+</suite> <!-- Suite -->

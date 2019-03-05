@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.log4jdemo.log4jdemo.AppTest&apos; to &apos;log4jexample&apos;&#x0D;&#x0A;- Original project: &apos;log4jdemo&apos;&#x0D;&#x0A;- Original element: &apos;com.log4jdemo.log4jdemo.AppTest&apos;&#x0D;&#x0A;- Renamed element: &apos;com.log4jdemo.log4jdemo.log4jexample&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AppTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java&lt;com.log4jdemo.log4jdemo{AppTest.java[AppTest" matchStrategy="1" name="log4jexample" qualified="false" references="true" similarDeclarations="false" stamp="1549399140760" textual="false" version="1.0"/>
+</session>

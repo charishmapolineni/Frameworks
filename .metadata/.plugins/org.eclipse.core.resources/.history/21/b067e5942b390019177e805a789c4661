@@ -1,0 +1,31 @@
+package project;
+
+import org.openqa.selenium.support.PageFactory;
+
+import utility.ReadExcelData;
+
+
+
+public class HybridTest {
+	public static void main(String[] args) throws Exception
+	{
+		
+		String sPath="C:\\Users\\bolle\\Documents\\TestExcel.xlsx";
+		ReadExcelData.setExcelFile(sPath, "Sheet2");
+		for (int iRow=1;iRow<=17;iRow++)
+		{
+			String sactions = ReadExcelData.getCellData(iRow, 1);
+			if(sactions.equals("openBrowser"))
+			{
+			actions.openBrowser();
+	}
+			else if(sactions.equals("navigateapplication"))
+			{
+				actions.navigateapplication();
+			}
+			else if(sactions.equals("maximizeWindow"))
+			{
+				actions.maximizeWindow();
+			}
+			else if(sactions.equals("")
+}

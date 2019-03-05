@@ -1,0 +1,78 @@
+package project;
+
+import org.openqa.selenium.support.PageFactory;
+
+import utility.ReadExcelData;
+
+
+
+public class HybridTest {
+	public static void main(String[] args) throws Exception
+	{
+		
+		String sPath="C:\\Users\\bolle\\Documents\\TestExcel.xlsx";
+		ReadExcelData.setExcelFile(sPath, "Sheet2");
+		for (int iRow=1;iRow<=17;iRow++)
+		{
+			String sActions = ReadExcelData.getCellData(iRow, 1);
+			if(sActions.equals("openBrowser"))
+			{
+				actions.openBrowser();
+			}
+			else if(sActions.equals("navigateapplication"))
+			{
+				actions.navigateapplication();
+			}
+			else if(sActions.equals("maximizeWindow"))
+			{
+				actions.maximizewindow();
+			}
+			else if(sActions.equals("enterinvalidusername"))
+			{
+				actions.enterinvalidusername();
+			}
+			else if(sActions.equals("enterinvalidpassword"))
+			{
+				actions.enterinvalidpassword();
+			}
+			else if(sActions.equals("implimentWait"))
+			{
+				actions.implimentwait();
+			}
+			else if(sActions.equals("ClickSubmit"))
+			{
+				actions.clicksubmit();
+			}
+			else if(sActions.equals("verifyMessage"))
+			{
+				actions.verifyMessage();
+				
+			}
+			else if(sActions.equals("opencoursesbrowser"))
+			{
+				actions.opencoursesbrowser();
+			}
+			else if (sActions.equals("openmyclassroompage"))
+			{
+				actions.openmyclassroompage();
+			}
+			else if(sActions.equals("implimentWait"))
+			{
+				actions.implimentwait();
+			}
+			else if(sActions.equals("navigateback"))
+            {
+	        actions.navigateback();
+            }
+			else if(sActions.equals("myprofilepage"))
+{
+				actions.myprofilepage();
+}
+			else if(sActions.equals("Clicklogout"))
+			{
+				actions.clicklogout();
+			}
+		}
+	}
+
+}

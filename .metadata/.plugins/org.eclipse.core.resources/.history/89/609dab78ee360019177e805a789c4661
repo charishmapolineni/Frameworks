@@ -1,0 +1,53 @@
+package KeywordDrivenTesting;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import utility.ReadExcelFile;
+
+public class application {
+  
+
+@Test
+public void applicationTest() throws IOException, InterruptedException{
+	String[][] data = ReadExcelFile.getData("TestExcel.xlsx", "Sheet2");
+	for(int i=1;i<data.length;i++) {
+		
+		switch(data[i][3])  {
+		case "openBrowser":
+		Methods.openBrowser();
+		break;
+		case "navigate":
+		Methods.navigate(data[i][6]);
+		break;
+		case "maximizeWindow":
+		Methods.maximizeWindow();
+		break;
+		case "navigateapplication":
+		Methods.navigate(data[i][6]);
+		break;
+		
+			
+			
+		}
+	
+	}}}
+
+  
+
+		 
+			  
+			 
+			  
+			  
+			
+		  		
+		  		
+		  
+  
+
+  
+

@@ -1,0 +1,12 @@
+package Com.log4jdemo;
+
+import org.apache.log4j.Logger;
+
+public class log4jdemo {
+	final static Logger logger = Logger.getLogger(HybridTest.class);
+	public static void main(String args[])
+		logger.info("HybridTest info");
+	}
+	
+
+}
